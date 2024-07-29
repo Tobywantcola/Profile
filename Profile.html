@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="icon" type="image" href="https://i.pinimg.com/564x/0d/42/c5/0d42c51c82fca7b2a1360ffec4747b2a.jpg">
+        <title>My personal profile</title>
+    </head>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+}
+main{
+    position: relative;
+    background: url(https://img.freepik.com/free-vector/modern-desktop-background-geometric-blue-design-vector_53876-135923.jpg?w=826&t=st=1707822947~exp=1707823547~hmac=4f87ce145b0a889597f824395302c2983152a060389a757e7900d07b141ef60f);    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+nav {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 80px;
+    z-index: 5;
+}
+nav ul {
+    float: right;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+nav ul li a{
+    line-height: 80px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    list-style: none;
+    text-decoration: none;
+    font-family: arial;
+}
+nav ul li a:hover {
+    color: rgb(30, 94, 255);
+    transition: .5s;
+}
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 80px;
+    padding-left: 40px;
+    color: rgb(12, 34, 201);
+    text-transform: uppercase;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    cursor: pointer;
+    margin-right: 20px;
+    line-height: 80px;
+    display: none;
+}
+#check {
+    display: none;
+}
+@media (max-width:952px) {
+    .logo {
+        font-size: 30px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:856px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(50, 50, 50);
+        padding-top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+    }
+    nav ul li a {
+        font-size: 35px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+    footer img {
+        display: none;
+    }
+    .f-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.home{
+    display: flex;
+    padding: 300px 110px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home h2 {
+    font-size: 30px;
+    color: rgb(0, 207, 239);
+}
+.home span {
+    background: linear-gradient(rgb(37, 78, 201),rgb(0, 142, 218));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 35px;
+}
+.home h1 {
+    font-size: 35px; 
+    color: white;
+}
+.home p {
+    font-size: 20px;
+    color: white;
+}
+@media (max-width:856px) {
+    main {
+        width: 100%;
+        height: 100%;
+    }
+    .home {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 100px 50px;
+        align-items: center;
+        text-align:center ;
+    }
+    .toby {
+    position: relative;
+    margin-top: 20px;
+    margin-left: -200px;
+    bottom: 20px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    border: 10px solid rgb(2, 46, 176); 
+    filter: drop-shadow(5px 5px 30px rgb(17, 31, 184));
+    }
+}
+
+.toby {
+    position: relative ;
+    top:-25%;
+    width: 400px;
+    height: 400px;
+    right:  -110px;
+    border-radius: 50%;
+    border: 10px solid rgb(2, 46, 176); 
+    filter: drop-shadow(5px 5px 30px rgb(17, 31, 184));
+}
+html {
+    scroll-behavior:smooth;
+}
+footer {
+    background: url(https://i.pinimg.com/564x/04/3a/86/043a8624eaf0ef7d51bc255ddb3f085d.jpg);    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    font-family: arial;
+}
+.f-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.about-me-text {
+    text-align:center;
+    color: white;
+    padding-top: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+.about-me-text::after {
+    content: "";
+    height: 4px;
+    width: 255px;
+    background-color: aqua;
+    display: block;
+    margin: auto;
+}
+.f1 {
+    max-width: auto;
+    margin-right: 25px;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.f1 h1 {
+    font-size: 40px;
+    color: rgb(212, 212, 212);
+}
+.f1 h2 {
+    font-size: 20px;
+    font-weight: 10px;
+    color: rgb(179, 179, 179);
+}
+.f2 {
+    max-width: 500px;
+}
+.f2 h2 {
+    color: rgb(179, 179, 179);
+}
+.s1 {
+    color: rgb(0, 40, 240);
+}
+.skill h1 {
+    text-align: center;
+}
+.skill {
+    list-style: none;
+    width: 450px;
+    color: white;
+    padding: 20px;
+}
+.skill li {
+    margin: 20px 0;
+    padding: 10px;
+}
+.bar {
+    background: rgb(45, 44, 44);
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow:hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,.1);
+}
+.bar:hover {
+     box-shadow: 0 14px 28px rgba(3, 188, 255, 0.584), 0 10px 10px rgba(30, 14, 201, 0.22);
+}
+.bar span {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg,aqua, rgb(56, 3, 213));
+}
+.html {
+    width: 61%;
+    animation: html 3s;
+}
+.css {
+    width: 54%;
+    animation: css 3s;
+}
+.javascript {
+    width: 2%;
+    animation: javascript 3s;
+}
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 61% ;
+    }
+}
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 54% ;
+    }
+}
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 2% ;
+    }
+}
+@media (max-width:854px) {
+    footer {
+        width: 100%;
+        height: 100%;
+    }
+    .f-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .skill {
+    align-items: center;
+    list-style: none;
+    width: 280px;
+    color: white;
+    padding-left: 1px;
+}
+    .f1 h1 {
+        text-align: center;
+        font-size: 26px;  
+    }
+    .f1 h2 {
+        max-width: 300px;
+        font-size: 14px;
+    }
+    .skill {
+        max-width: 300px;
+        justify-content: center;
+    }
+    .f2 h1 {
+        max-width: 300px;
+        text-align: center;
+        font-size: 25px;
+    }
+    .f2 li h3 {
+        max-width: 250px;
+        font-size: 15px;
+    }
+    .f2 .bar {
+        max-width: 250px;
+
+    }
+}
+section {
+    background: url(https://i.pinimg.com/564x/d0/03/84/d003844ea8b8a514d7190f23790a91fa.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.sv1 h1 {
+    color:  black;
+    font-size: 42px;
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 100px;
+}
+.sv1 h1::after {
+    content: "";
+    height: 4px;
+    width: 230px;
+    background-color: aqua;
+    display: block;
+    margin: auto;
+}
+.sv1 span {
+    color: rgb(0, 40, 240);
+}
+.sv2 {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 20px 20px;
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card:hover {
+    background-color:  #072b4d;
+    transition: 0.8s ease;
+
+    
+}
+.card .icon {
+    color: aqua;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: rgb(75, 13, 218);
+}
+.card p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color:white;
+}
+.web-button {
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(75, 15, 218);
+    padding: 8px 12px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+.web-button:hover {
+    background-color: rgb(12, 95, 179);
+    transition: 0.4s ease;
+}
+@media (max-width:856px) {
+    section {
+        width: 100%;
+        height: 100%;
+    }
+    .sv2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        width: 85%;
+        display: flex;
+        margin: 20px 0px;
+    }
+}
+article {
+    background: url(https://i.pinimg.com/564x/df/78/af/df78af5e39d635f212a439cec6149c42.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat ;
+    width: 100%;
+    height: 170vh;
+    z-index: -1;
+}
+.gallery-container {
+    width: 100%;
+    text-align: center;
+    
+}
+article input {
+    display: none;
+}
+.gallery-container h1 {
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    margin: 0 0 40px 0;
+    padding-top: 40px;
+}
+
+.top-content {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px blue;
+}
+.top-content h3 {
+    height: 100%;
+    background-color: black;
+    line-height: 60px; 
+    color: white; 
+    border-radius: 10px; 
+    padding: 10px; 
+}
+.top-content label {
+    display: inline-block;
+    height: 100%;
+    padding: 0 20px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: gray;
+    cursor: pointer;
+    transition:  .5s;
+}
+.top-content label:hover {
+    color: blue;
+}
+.photo-gallery {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    z-index: -1;
+}
+.pic  {
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 5px aqua;
+    cursor: pointer;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+.pic::before {
+    content: "Photo Gallery";
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: white;
+    background-color: rgba(7, 7, 7, 0.632);
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+pic::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgb(0, 0, 0);
+    transform: .3s;
+}
+.pic:hover::after {
+    height: 100%;
+}
+.pic:hover::before {
+    margin-top: 0;
+    opacity: 1;
+}
+#checks1:checked ~ .gallery-container .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+#checks2:checked ~ .gallery-container .photo-gallery .myself{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: .5s;
+}
+#checks2:checked ~ .gallery-container .photo-gallery .edited,
+#checks2:checked ~ .gallery-container .photo-gallery .others{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+#checks3:checked ~ .gallery-container .photo-gallery .edited{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: .5s;
+}
+#checks3:checked ~ .gallery-container .photo-gallery .myself,
+#checks3:checked ~ .gallery-container .photo-gallery .others{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+#checks4:checked ~ .gallery-container .photo-gallery .others{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: .5s;
+}
+#checks4:checked ~ .gallery-container .photo-gallery .myself,
+#checks4:checked ~ .gallery-container .photo-gallery .edited{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+@media (max-width:854px) {
+    article {
+        width: 100%;
+        height: 180vh;
+    }
+    .top-content {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto 15px auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px blue;
+}
+    .top-content label {
+        display: inline-block;
+        font-size: 10px;
+        padding: 0 15px;
+    }
+    .top-content h3 {
+        font-size: 15px;
+    }
+}
+.gallery-container span {
+    color: rgb(0, 40, 240);
+}
+.gallery-container span::after {
+    content: "";
+    height: 4px;
+    width: 180px;
+    background-color: aqua;
+    display: block;
+    margin: auto;
+}
+figure {
+    background: url(https://i.pinimg.com/564x/33/84/4f/33844fb8b7492e2e859c04a49fb6168c.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.figure-title {
+    width: 100%;
+    text-align: center;
+}
+.figure-title h1 {
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    margin: 0 0 40px 0;
+    padding-top: 40px;
+}
+.figure-title span {
+    color: rgb(0, 40, 240);
+}
+.figure-title h1::after{
+    content: "";
+    height: 4px;
+    width: 180px;
+    background-color: aqua;
+    display: block;
+    margin: auto;
+}
+.contact-container {
+    display: flex;
+    margin: 1px 10px 0px 10px;
+    justify-content: space-evenly;
+}
+.con1 h2{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0px 10px 3px 10px;
+}
+.con1 h4 {
+    font-size:20px;
+    font-weight:400;
+    color: white;
+    padding: 0px 10px 8px 10px;
+}
+.con2 h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px 3px 10px;
+}
+.con2 i{
+    font-size: 25px;
+    color: aqua;
+    padding: 0px 10px 1px 10px;
+}
+.con2 p {
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+}
+.con3 h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px 3px 10px;
+}
+.con3 i {
+    font-size: 25px;
+    color: aqua;
+    padding: 0px 10px 1px 10px;
+}
+.con3 p {
+    font-size: 25px;
+    font-weight:400;
+    color: white;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 550px;
+    padding-top: 50px;
+    
+}
+.contact-form input {
+    border: 2px solid aqua;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: rgb(38, 38, 38);
+}
+.contact-form textarea {
+    border: 2px solid aqua;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:rgb(38, 38, 38) ;
+    margin-bottom: 5px;
+}
+.contact-form button {
+    font-size: 20px;
+    font-weight: bold;
+    color: aqua;
+    background-color: rgba(38, 38, 38, 0);
+    border-radius: 5px;
+    border: 3px solid aqua;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    color: black;
+    background-color: aqua;
+    transition: .5s;
+}
+.contact-bottom {
+    background-color:  darkblue;
+    width: 100%;
+    height: 190px;
+    margin-top: 30px;
+}
+.conbot-title h2{
+    text-align: center;
+    padding-top: 25px;
+    color: aqua;
+    font-size: 30px;
+    font-weight: 500;
+}
+.conbot1 {
+    text-align: center;
+    padding-top: 25px;
+}
+.conbot1 i {
+    font-size: 50px;
+    color: aqua;
+    letter-spacing: 12px;
+}
+.conbot1 i:hover {
+    color: white;
+    filter: drop-shadow(1px 1px 20px  white);
+    transform: scale(1.5);
+    transition: .5s
+}
+.conbot2 {
+    text-align: center;
+    padding-top: 28px;
+}
+.conbot2 h4 {
+    font-size: 20px;
+    color: white;
+}
+.conbot2 span {
+    color: aqua;
+}
+@media (max-width:856px) {
+    figure {
+        width: 100%;
+        height: auto;
+    }
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .con3 p {
+        font-size: 20px;
+        font-weight:400;
+        color: white;
+    }
+    .contact-bottom {
+        width: 100%;
+        height: auto;
+    }
+}
+.arrow {
+    position: fixed;
+    background: aqua;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    font-size: 22px;
+    z-index: 5;
+}
+.arrow:hover {
+    background:white;
+    color:black;
+    box-shadow:1px 1px 20px white;
+    transition: .5s;
+}
+@media (max-width:856px) {
+    .arrow {
+        width: 50px;
+        height: 50px;
+        right: 10px;
+        bottom: 50px;
+
+    }
+}
+
+</style>
+    <body>
+        <widget>
+            <a href="#" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+        </widget>
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                    <label class="logo">toby</label>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-me">about me</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <a href="#home" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+            <div id="home" class="home">
+                <div class="text-container">
+                    <h2>Hi Everyone</h2>
+                    <h1>I'm <span>KRISTOFERSON PEREZ</span></h1>
+                    <h2>MULTIMEDIA CREATOR</h2>
+                    <p>I'm a beginner in developing a website and starting to learn.<br>
+                        Practising to create a website to improve my  skill.</p>
+                </div>
+                <div>
+                    <img src="https://blob.sololearn.com/avatars/0e2549f9-060c-4b23-896c-542f2216779e.jpg" alt="me" class="toby">
+                </div>
+            </div>
+        </main>
+        <hr>
+        <footer id="about-me">
+            <br><br>
+            <h1 class="about-me-text">About <span class="s1">Me</spam></h1>
+            <div class="f-container">
+                <div class="f1">
+                    <h1>Hello I,m <span class="s1">Toby</span></h1>
+                    <br>
+                    <h2>I'm a Students who are dreaming to become a Profesional <span class="s1">IT, Content Creator and video or Photo Editor</span> and since im just a begginer here in programming i will practise more to improve my skills and knowledge. 
+                     <span class="s1">ENJOY</span>!!
+                    </h2>
+                    <br>
+                    <h2>
+                    Name: <span>KRISTOFERSON P PEREZ</span><br>
+                    Birthdate: <span> September 24 2007</span><br>
+                    Address: Cogeo,Antipolo City,Rizal<br>
+                    Age:16<br>
+                    Experience: Beginner<br>
+                    Gender:Male<br>
+                    </h2>
+                </div>
+                <div class="f2">
+                    <div class="skill">
+                        <h1> MY SKILL</h1>
+                        <li><h3>HTML</h3>
+                            <span class="bar"><span class="html"></span></span>
+                        </li>
+                        <li><h3>CSS</h3>
+                            <span class="bar"><span class="css"></span></span>
+                        </li>
+                        <li><h3>Javascript</h3>
+                            <span class="bar"><span class="javascript"></span></span>
+                        </li>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <hr>
+        <section id="services">
+            <div class="sv1">
+                <h1>- <span>services</span> -</h1>
+            </div>
+            <div class="sv2">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-file"></i>
+                    </div>
+                    <h2>Web Developer</h2>
+                    <p>In this service we will help you made a website for your
+                       portfolio,business shop and anything you want to put in 
+                       your Website that we will do with creative design.</p>
+                    <a href="#" class="web-button">Read more</a>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h2>Multimedia creator</h2>
+                    <p>In this service i will help you take a video or picture
+                       that you want to film and i will be the cameraman.</p>
+                    <a href="#" class="web-button">Read more</a>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h2>Video/Photo Editing</h2>
+                    <p>In this service i will edit your video that you want
+                        like make it more cinematic or advertisement and i 
+                        also editing a picture like you want to make your
+                        picture a movie poster and etc. </p>
+                    <a href="#" class="web-button">Read more</a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <article id="gallery">
+            <input type="radio" name="photos" id="checks1" checked>
+            <input type="radio" name="photos" id="checks2">
+            <input type="radio" name="photos" id="checks3">
+            <input type="radio" name="photos" id="checks4">
+            
+            <div class="gallery-container">
+                <br><br><br>
+                <h1>My <span>Gallery</span></h1>
+                <div class="top-content">
+                    <h3>Photo Gallery</h3>
+                    <label for="checks1">All Photos</label>
+                    <label for="checks2">My Photos</label>
+                    <label for="checks3">My Edit</label>
+                    <label for="checks4">Others</label>
+                </div>
+
+                <div class="photo-gallery">
+                    <div class="pic edited">
+                        <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/429454294_1985891455141066_4725293370041339206_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGXVSitOY0r8M_5Dd9izqSfz1RbUx9XzcvPVFtTH1fNy-oX0r7xnHDRaLbmnoL1DuVPddgu6EyYGJfl-TjarlAl&_nc_ohc=-hRckR81h74AX95JLaS&_nc_ht=scontent.fmnl17-1.fna&oh=03_AdRdYoF0vixXXZ3lAQENZocqUfa6m07EZA75cf3kazDruQ&oe=6600EFB7">
+                    </div>
+                    <div class="pic edited">
+                        <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t1.15752-9/420658805_3073526016114184_4984606694787980484_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFGPHVNzvjv_2nWOtgh2A0tApFn4eQPWuYCkWfh5A9a5m_TSIq088g6VubJK7QPZXR8DJtrsKBOgM7DIbj64aDU&_nc_ohc=h3-SgbyFoAMAX-Pybi3&_nc_ht=scontent.fmnl17-4.fna&oh=03_AdT0asR4OCdbFkYARXcZZl_q-EC53YCL0hvb2GJiEGvMXw&oe=6600E261">
+                    </div>
+                    <div class="pic edited">
+                        <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/429437919_24775237345454420_6640802640628597292_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeH4AwMahUkPZSRI4rS-ieMBneWcgoUpA1ud5ZyChSkDWw-Mw28ckTxWuZZIx-mDmb6NViOCbtMczVwvSQOHpMQQ&_nc_ohc=c95CM2nKo1QAX_gI4ob&_nc_ht=scontent.fmnl17-3.fna&oh=03_AdRk0VgTQSpxjdOkDfrYYuWSIg2GVuQAMXOExFgzbQ6b6A&oe=6600EE35">
+                    </div>
+                    <div class="pic myself">
+                        <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/429407807_1038811130550951_1197300501745990776_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeEgbSSPmooxuDiibZAe9h92rZV4dyJUP22tlXh3IlQ_bRHAw3WHGIpnKKlZIIgX_lkYsW905c-Amx77F8peEFdR&_nc_ohc=QFG2O0R0YSQAX9VhZb5&_nc_ht=scontent.fmnl17-2.fna&oh=03_AdSgd8BLc7uSrx4vZE2q4H6r7rcHAk17r8dVG7svhvGZgw&oe=6600E246">
+                    </div>
+                    <div class="pic myself">
+                        <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/428901876_823032486300867_6305600214095065461_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGH1ricEgk3gpD81ClZWN3UkiSIklb0mm2SJIiSVvSabdqx7X9Dw5RpjxSCCgmvBhRwL-8VTQeQWxthUOEqM-mN&_nc_ohc=fKZFi_sFkLAAX-2kG5y&_nc_ht=scontent.fmnl17-3.fna&oh=03_AdTC2YN0HNabyXeom0mAsKINH7X-TnhYLUfdUP1qdbOZWg&oe=6600E5E0">
+                    </div>
+                    <div class="pic myself">
+                        <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/429308256_384969214240449_8194113049179369874_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeELFeUCq_40YAmjYT_GLVIPtwcUYfZCXji3BxRh9kJeONAilKuj1CJHBi5O0d0RLjihIARA5BIZHkrEp8YvxOBp&_nc_ohc=d7nW0of4LmsAX_V0d07&_nc_ht=scontent.fmnl17-1.fna&oh=03_AdQC_cKo6Ncs-326BYxFs8uMDB_W-HG3T150wrY9YVEEZg&oe=6600EE98">
+                    </div>
+                    <div class="pic others">
+                        <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/429415172_1826131857825739_4925007513836415333_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHBkuSoZm8hZKmev41wHH0BR_DXz_lAJr5H8NfP-UAmvp0PdB2P9NEEDUEowbLYY62msw8pKudGWaN0UX2Ausa9&_nc_ohc=nKXej-_NwO0AX-F5UIF&_nc_ht=scontent.fmnl17-2.fna&oh=03_AdQplWAkVGk0vx26aBASwzo9Lz28OyPufjKLXrWm7asmNQ&oe=6601538C">
+                    </div>
+                    <div class="pic others">
+                        <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/405809725_662078719452320_2473257844750608488_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeG2YRkkWNLVrmDOusch8yUH9B3ukiOHmwX0He6SI4ebBWWU9I9BXfRxxPQvhAF0vDGtZQvAWaOd7fop_ghZ-dtf&_nc_ohc=X3tDpIj7K6EAX-dgdSC&_nc_ht=scontent.fmnl17-2.fna&oh=03_AdRlm_rTCVnsdDlhbbl62qKjx9QbRK0yT_BmHLctyia8cQ&oe=66014E32">
+                    </div>
+                    <div class="pic others">
+                        <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/429439918_1390487021657447_4074067252588108719_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHRPhPqrx-Sckw2ivdEXWfVmkEKQ-GN14uaQQpD4Y3Xi9Uq-ooG8SlDLbSwudRqMiNmqGReFYCMrUEExk6RhZV-&_nc_ohc=Xxt-ZExR6UYAX9VZbAJ&_nc_ht=scontent.fmnl17-3.fna&oh=03_AdRgzFKXt6MJoZzvi3A5vpW6LiQFlA31UuJEM0yoDazG-A&oe=66015F21">
+                    </div>
+                </div>
+            </div>
+        </article>
+        <hr>
+        <figure id="contact">
+            <br><br>
+            <div class="figure-title">
+                <h1>Contact <span>Me</span></h1>
+            </div>
+            <div class="contact-container">
+                <div class="contact-details">
+                    <div class="con1">
+                        <h2>Contact Information</h2>
+                        <h4>Here are my contact details just in case you want to contact me</h4>
+                    </div>
+                    <div class="con2">
+                        <h3>Phone:</h3>
+                        <p><i class="fas fa-phone"></i>09659871584</p>
+                        <p><i class="fas fa-phone"></i>09260489161</p>
+                    </div>
+                    <div class="con3">
+                        <h3>Email:</h3>
+                        <p><i class="fas fa-envelope "></i>perezkristoferson@gmail.com</p>
+                        <p><i class="fas fa-envelope "></i>kristofersonperez27@gmail.com</p>
+                    </div>
+                </div>
+                <br>
+                <div class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea rows="10" cols="30" name="email" placeholder="Message" required></textarea>
+                 <button type="submit">Send Message</button>
+                </div>
+            </div>
+            <div class="contact-bottom">
+                <div class="conbot-title">
+                    <h2>Follow Me</h2>
+                </div>
+                <div class="conbot1">
+                    <a href="https://www.facebook.com/kristoferson.perez" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@tobywantpepsi?_t=8kMSxiMMocM&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/tobywantcola?igsh=MTJ0bGxrenJwZXNkMw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="conbot2">
+                    <h4>Created By <span>KRISTOFERSON PEREZ</span> | All Rights Reserved </h4>
+                </div>
+            </div>
+        </figure>
+        
+    </body>
+</html>
